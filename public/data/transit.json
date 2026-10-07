@@ -1,0 +1,25 @@
+{
+  "version": "demo-0.1",
+  "stops": [
+    { "id": "S001", "name": "Avtovokzal", "lat": 42.4612, "lng": 59.6103, "districtId": "nukus" },
+    { "id": "S002", "name": "Markaziy bozor", "lat": 42.4605, "lng": 59.6032, "districtId": "nukus" },
+    { "id": "S003", "name": "Do'stlik ko'chasi", "lat": 42.4589, "lng": 59.5971, "districtId": "nukus" },
+    { "id": "S004", "name": "Hokimiyat", "lat": 42.4574, "lng": 59.5918, "districtId": "nukus" },
+    { "id": "S005", "name": "Universitet", "lat": 42.4531, "lng": 59.5862, "districtId": "nukus" },
+    { "id": "S006", "name": "Amir Temur ko'chasi", "lat": 42.4628, "lng": 59.5994, "districtId": "nukus" },
+    { "id": "S007", "name": "Madaniyat saroyi", "lat": 42.4652, "lng": 59.5951, "districtId": "nukus" }
+  ],
+  "routes": [
+    {
+      "id": "R01", "number": "1", "type": "bus", "name": "Avtovokzal — Universitet",
+      "color": "#0d9488", "bidirectional": true, "districtId": "nukus",
+      "stopIds": ["S001", "S002", "S003", "S004", "S005"],
+      "schedule": { "firstDeparture": "06:00", "lastDeparture": "21:30", "intervalMin": 15 }
+    },
+    {
+      "id": "R02", "number": "7", "type": "marshrutka", "name": "Bozor — Madaniyat saroyi",
+      "color": "#ea580c", "bidirectional": true, "districtId": "nukus",
+      "stopIds": ["S002", "S006", "S007"]
+    }
+  ]
+}
