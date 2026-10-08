@@ -3,7 +3,9 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { fileURLToPath, URL } from "node:url";
-export default defineConfig({resolve: { alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) } },
+
+export default defineConfig({
+  resolve: { alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) } },
   plugins: [
     react(),
     tailwindcss(),
@@ -36,10 +38,10 @@ export default defineConfig({resolve: { alias: { "@": fileURLToPath(new URL("./s
         runtimeCaching: [
           {
             // Xarita plitkalari: ko'rilganlari offline'da ishlaydi
-            urlPattern: /^https:\/\/[a-c]\.tile\.openstreetmap\.org\/.*/,
+            urlPattern: /^https:\/\/([a-d]\.basemaps\.cartocdn\.com|[a-c]\.tile\.openstreetmap\.org)\/.*/,
             handler: "CacheFirst",
             options: {
-              cacheName: "osm-tiles",
+              cacheName: "map-tiles",
               expiration: { maxEntries: 600, maxAgeSeconds: 60 * 60 * 24 * 30 },
               cacheableResponse: { statuses: [0, 200] },
             },
