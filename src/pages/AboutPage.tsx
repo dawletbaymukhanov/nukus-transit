@@ -12,6 +12,9 @@ export default function AboutPage() {
       <p className="text-slate-500">
         Ma'lumotlar versiyasi: {version ?? "—"} · {stops.length} bekat · {routes.length} yo'nalish
       </p>
+      <p className="text-xs text-slate-400">
+        Xarita va bekatlar: © OpenStreetMap contributors (ODbL), xarita uslubi © CARTO.
+      </p>
     </div>
   );
 }
